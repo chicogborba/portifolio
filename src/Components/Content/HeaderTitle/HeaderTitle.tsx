@@ -30,7 +30,12 @@ const HeaderTitle = () => {
             voluptas. Rerum, soluta nisi!
           </Typography>
         </div>
-        <Lottie options={defaultOptions} height={400} width={325} />
+        <Lottie
+          style={{ margin: 0 }}
+          options={defaultOptions}
+          height={400}
+          width={325}
+        />
       </div>
     </>
   );
