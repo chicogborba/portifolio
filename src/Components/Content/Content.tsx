@@ -1,33 +1,23 @@
-import { Paper, Typography } from "@mui/material";
-import Lottie from "react-lottie";
+import { Paper } from "@mui/material";
 import React from "react";
-import animationData from "../../animations/animation.json";
+import EnhancedDivider from "../EnhancedDivider/EnhancedDivider";
+import HeaderTitle from "./HeaderTitle/HeaderTitle";
+import Techs from "./Techs/Techs";
 
 const Content = () => {
-  const paperStyles = {
-    backgroundColor: "rgb(31 41 55 / var(--tw-bg-opacity))",
-  };
+  const paperStyles = {};
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   return (
-    <>
+    <div>
       <Paper
         sx={paperStyles}
-        className={"h-screen w-screen flex justify-center"}
+        className={"h-screen flex-col justify-center p-16"}
       >
-        <Typography variant="h6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        </Typography>
-        <Lottie options={defaultOptions} height={400} width={400} />
+        <HeaderTitle />
+        <EnhancedDivider />
+        <Techs />
       </Paper>
-    </>
+    </div>
   );
 };
 

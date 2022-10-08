@@ -1,14 +1,22 @@
-import { Paper } from "@mui/material";
+import { createTheme, Paper, ThemeProvider } from "@mui/material";
 import React from "react";
 import Content from "../../Components/Content/Content";
 import SideBar from "../../Components/SideBar/SideBar";
 
 const MainPage = () => {
+  const theme = createTheme({
+    palette: {
+      mode: "dark",
+    },
+  });
+
+  //<SideBar />
   return (
-    <div className="flex justify-center">
-      <SideBar />
-      <Content />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="flex justify-center">
+        <Content />
+      </div>
+    </ThemeProvider>
   );
 };
 
