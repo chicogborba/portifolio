@@ -1,14 +1,7 @@
 import { Typography } from "@mui/material";
-import React, { memo, useCallback, useMemo } from "react";
+import React, { memo, useCallback, useEffect, useMemo } from "react";
 import TechIcon from "../../TechIcon/TechIcon";
-// @ts-ignore
-import { ReactComponent as GitIcon } from "./icons/github-icon.svg";
-// @ts-ignore
-import { ReactComponent as MUIIcon } from "./icons/material-ui-icons.svg";
-// @ts-ignore
-import { ReactComponent as JSIcon } from "./icons/js-icon.svg";
-// @ts-ignore
-import { ReactComponent as ReactIcon } from "./icons/react-icon.svg";
+import { techsList, techsTexts } from "./TechsData";
 
 export type Tech = {
   id: number;
@@ -18,95 +11,19 @@ export type Tech = {
 
 const Techs = () => {
   const [selectedID, setSelectedID] = React.useState(1);
+  const [delayedID, setDelayedID] = React.useState(1);
+  const [srink, setSrink] = React.useState(false);
   const handelClick = useCallback((id: number) => {
     setSelectedID(id);
   }, []);
 
-  const techsList: Tech[] = [
-    {
-      id: 1,
-      name: "React",
-      icon: <ReactIcon />,
-    },
-    {
-      id: 2,
-      name: "JavaScript",
-      icon: <JSIcon />,
-    },
-    {
-      id: 3,
-      name: "MUI",
-      icon: <MUIIcon />,
-    },
-    {
-      id: 4,
-      name: "Git",
-      icon: <GitIcon />,
-    },
-    {
-      id: 5,
-      name: "React",
-      icon: <ReactIcon />,
-    },
-    {
-      id: 6,
-      name: "JavaScript",
-      icon: <JSIcon />,
-    },
-    {
-      id: 7,
-      name: "MUI",
-      icon: <MUIIcon />,
-    },
-    {
-      id: 8,
-      name: "Git",
-      icon: <GitIcon />,
-    },
-  ];
-
-  const techsTexts = [
-    {
-      techId: 1,
-      text: "React is a JavaScript library for building user interfaces.",
-      icon: <ReactIcon className="w-32 h-32" />,
-    },
-    {
-      techId: 2,
-      text: "JavaScript is a programming language that conforms to the ECMAScript specification.",
-      icon: <JSIcon className="w-32 h-32" />,
-    },
-    {
-      techId: 3,
-      text: "Material-UI is a simple and customizable component library to build faster, beautiful, and more accessible React applications.",
-      icon: <MUIIcon className="w-32 h-32" />,
-    },
-    {
-      techId: 4,
-      text: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
-      icon: <GitIcon className="w-32 h-32" />,
-    },
-    {
-      techId: 5,
-      text: "React is a JavaScript library for building user interfaces.",
-      icon: <ReactIcon className="w-32 h-32" />,
-    },
-    {
-      techId: 6,
-      text: "JavaScript is a programming language that conforms to the ECMAScript specification.",
-      icon: <JSIcon className="w-32 h-32" />,
-    },
-    {
-      techId: 7,
-      text: "Material-UI is a simple and customizable component library to build faster, beautiful, and more accessible React applications.",
-      icon: <MUIIcon className="w-32 h-32" />,
-    },
-    {
-      techId: 8,
-      text: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
-      icon: <GitIcon className="w-32 h-32" />,
-    },
-  ];
+  useEffect(() => {
+    setSrink(true);
+    setTimeout(() => {
+      setSrink(false);
+      setDelayedID(selectedID);
+    }, 300);
+  }, [selectedID]);
 
   return (
     <div className="flex justify-center">
@@ -123,14 +40,16 @@ const Techs = () => {
         </div>
       </div>
       <div
-        className="mt-8 ml-8 mr-8 w-56 
-      flex flex-col justify-center items-center text-center
-       fill-purple-400 text-purple-400"
+        className={
+          `mt-8 ml-8 mr-8 w-56 
+      flex flex-col scale-100 transition-all justify-center items-center text-center
+       fill-purple-400 text-purple-400` + (srink ? " scale-0" : "")
+        }
       >
-        {techsTexts.find((tech) => tech.techId === selectedID)?.icon}
+        {techsTexts.find((tech) => tech.techId === delayedID)?.icon}
         <div className="mt-4">
           <Typography variant="caption">
-            {techsTexts.find((tech) => tech.techId === selectedID)?.text}
+            {techsTexts.find((tech) => tech.techId === delayedID)?.text}
           </Typography>
         </div>
       </div>

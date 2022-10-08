@@ -5,8 +5,8 @@ const EnhancedDivider = () => {
   return (
     <>
       <div className="flex justify-center">
-        <Divider>
-          ==============================//==============================
+        <Divider light orientation="horizontal" flexItem>
+          //
         </Divider>
       </div>
     </>
