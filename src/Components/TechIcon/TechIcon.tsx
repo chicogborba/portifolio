@@ -10,10 +10,6 @@ export interface TechIconProps {
 }
 
 const TechIcon = ({ handelClick, isSelected, tech }: TechIconProps) => {
-  useEffect(() => console.log("handelClick"), [handelClick]);
-  useEffect(() => console.log("isSelected"), [isSelected]);
-  useEffect(() => console.log("tech"), [tech]);
-
   return (
     <div
       onClick={() => handelClick(tech.id)}
