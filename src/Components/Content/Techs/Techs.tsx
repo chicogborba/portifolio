@@ -25,9 +25,13 @@ const Techs = () => {
     }, 300);
   }, [selectedID]);
 
+  const selectedTech = useMemo(() => {
+    return techsTexts.find((tech) => tech.techId === delayedID);
+  }, [delayedID]);
+
   return (
-    <div className="flex justify-center">
-      <div className="flex-col justify-center text-center mt-8 ml-8 mr-8 w-2/5">
+    <div className="flex justify-center mb-20">
+      <div className=" text-purple-300 flex-col justify-center text-center mt-8 ml-8 mr-8 w-2/5">
         <Typography variant="h4">Technologies</Typography>
         <div className="flex flex-wrap justify-around gap-4 mt-8">
           {techsList.map((tech) => (
@@ -42,15 +46,20 @@ const Techs = () => {
       <div
         className={
           `mt-8 ml-8 mr-8 w-56 
+          hover:fill-purple-200
+          hover:text-purple-200
+          hover:cursor-pointer
+          hover:scale-105
       flex flex-col scale-100 transition-all justify-center items-center text-center
        fill-purple-400 text-purple-400` + (srink ? " scale-0" : "")
         }
+        onClick={() => {
+          window.open(selectedTech?.website, "_blank");
+        }}
       >
-        {techsTexts.find((tech) => tech.techId === delayedID)?.icon}
+        {selectedTech?.icon}
         <div className="mt-4">
-          <Typography variant="caption">
-            {techsTexts.find((tech) => tech.techId === delayedID)?.text}
-          </Typography>
+          <Typography variant="caption">{selectedTech?.text}</Typography>
         </div>
       </div>
     </div>

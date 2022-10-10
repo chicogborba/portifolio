@@ -1,6 +1,7 @@
 import { Paper } from "@mui/material";
 import React from "react";
 import EnhancedDivider from "../EnhancedDivider/EnhancedDivider";
+import Experiences from "./Experiences/Experiences";
 import HeaderTitle from "./HeaderTitle/HeaderTitle";
 import Techs from "./Techs/Techs";
 
@@ -14,6 +15,10 @@ const Content = () => {
     borderRadius: "16px",
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
     maxWidth: "100%",
+    minWidth: "875px",
+    width: "auto",
+    marginBotom: "24px",
+    height: "auto",
   };
 
   return (
@@ -25,6 +30,8 @@ const Content = () => {
         <HeaderTitle />
         <EnhancedDivider />
         <Techs />
+        <EnhancedDivider />
+        <Experiences />
       </Paper>
     </div>
   );

@@ -17,10 +17,11 @@ const TechIcon = ({ handelClick, isSelected, tech }: TechIconProps) => {
         `flex flex-col w-20 h-20 justify-center
       text-purple-400  p-2
       hover:cursor-pointer
+      hover:border-purple-100
       fill-purple-400
       rounded-md
       border-purple-400 border-2
-      transition-all duration-300 ease-in-out
+      transition-all duration-200
       items-center` +
         (isSelected ? " border-white bg-purple-500 fill-white text-white" : "")
       }
