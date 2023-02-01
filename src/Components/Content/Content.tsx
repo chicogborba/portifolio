@@ -3,6 +3,7 @@ import React from "react";
 import EnhancedDivider from "../EnhancedDivider/EnhancedDivider";
 import Experiences from "./Experiences/Experiences";
 import HeaderTitle from "./HeaderTitle/HeaderTitle";
+import Projects from "./Projects/Projects";
 import Techs from "./Techs/Techs";
 
 const Content = () => {
@@ -32,6 +33,8 @@ const Content = () => {
         <Techs />
         <EnhancedDivider />
         <Experiences />
+        <EnhancedDivider />
+        <Projects />
       </Paper>
     </div>
   );

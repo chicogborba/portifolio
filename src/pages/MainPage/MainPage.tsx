@@ -13,8 +13,8 @@ const MainPage = () => {
   //<SideBar />
   return (
     <ThemeProvider theme={theme}>
+      <SideBar />
       <div className="flex justify-center">
-        <SideBar />
         <Content />
       </div>
     </ThemeProvider>
