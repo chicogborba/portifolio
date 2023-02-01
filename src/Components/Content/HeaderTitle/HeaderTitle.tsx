@@ -19,7 +19,7 @@ const HeaderTitle = () => {
   return (
     <>
       <div className="flex justify-center text-justify">
-        <div className="mt-16 mr-8">
+        <div className="mt-16 mr-8 flex-1">
           <Typography
             className={"text-purple-300"}
             sx={titleStyles}
@@ -27,11 +27,14 @@ const HeaderTitle = () => {
           >
             Francisco Borba
           </Typography>
-          <Typography className="w-96 text-purple-400" variant="h6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
-            eveniet quidem ex voluptatem in laudantium facere perspiciatis
-            repudiandae ad omnis amet architecto dicta, quam debitis autem
-            voluptas. Rerum, soluta nisi!
+          <Typography className=" text-left text-purple-400" variant="h6">
+            Sou um desenvolvedor apaixonado por tecnologia e programação, com
+            foco no desenvolvimento web frontend. Iniciei minha jornada em 2021
+            como trainee na Suitable e posteriormente me tornei programador
+            frontend. Meus estudos começaram na UNISC, onde completei o primeiro
+            semestre em Ciência da Computação. Atualmente, continuo buscando
+            mais conhecimento em Porto Alegre, onde estou no terceiro semestre
+            do curso de Ciência da Computação na PUCRS.
           </Typography>
         </div>
         <Lottie

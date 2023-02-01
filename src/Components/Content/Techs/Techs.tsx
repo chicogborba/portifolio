@@ -33,7 +33,7 @@ const Techs = () => {
     <div className="flex justify-center mb-20">
       <div className=" text-purple-300 flex-col justify-center text-center mt-8 ml-8 mr-8 w-2/5">
         <Typography variant="h4">Technologies</Typography>
-        <div className="flex flex-wrap justify-around gap-4 mt-8">
+        <div className="grid grid-cols-4 justify-around gap-4 mt-8">
           {techsList.map((tech) => (
             <TechIcon
               tech={tech}
