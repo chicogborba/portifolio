@@ -6,13 +6,13 @@ const Experiences = () => {
   return (
     <div
       className={
-        "flex flex-col justify-center gap-16 mt-16 mb-16 text-purple-400"
+        "flex flex-col flex-wrap justify-center gap-16 mt-16 mb-16 text-purple-400"
       }
     >
       <h1 className="text-4xl text-center text-purple-400">
         🧪 Experiencias & Estudos 📚{" "}
       </h1>
-      <div className="flex justify-center gap-16">
+      <div className="flex flex-wrap justify-center gap-16">
         {experiencesList.map((experience) => (
           <div className="flex flex-col items-center">
             <div

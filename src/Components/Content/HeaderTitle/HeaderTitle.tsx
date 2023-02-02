@@ -18,7 +18,7 @@ const HeaderTitle = () => {
   };
   return (
     <>
-      <div className="flex justify-center text-justify">
+      <div className="flex flex-wrap justify-center text-justify">
         <div className="mt-16 mr-8 flex-1">
           <Typography
             className={"text-purple-300"}
@@ -38,10 +38,10 @@ const HeaderTitle = () => {
           </Typography>
         </div>
         <Lottie
-          style={{ margin: 0 }}
+          style={{ margin: 0, flex: 1 }}
           options={defaultOptions}
-          height={400}
-          width={325}
+          height={"auto"}
+          width={"auto"}
         />
       </div>
     </>

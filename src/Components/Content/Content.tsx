@@ -15,19 +15,14 @@ const Content = () => {
     "-webkit-backdrop-filter": "blur( 7px )",
     borderRadius: "16px",
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
-    maxWidth: "100%",
-    minWidth: "875px",
     width: "auto",
     marginBotom: "24px",
     height: "auto",
   };
 
   return (
-    <div className="ml-16 mt-6 mb-6">
-      <Paper
-        sx={paperStyles}
-        className={"h-screen flex-col justify-center p-16"}
-      >
+    <div className="ml-16 mt-6 mb-6 flex-wrap">
+      <Paper sx={paperStyles} className={"h-screen justify-center p-16"}>
         <HeaderTitle />
         <EnhancedDivider />
         <Techs />
