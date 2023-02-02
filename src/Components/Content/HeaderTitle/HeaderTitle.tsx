@@ -25,7 +25,7 @@ const HeaderTitle = () => {
             sx={titleStyles}
             variant="h2"
           >
-            Francisco Borba
+            Francisco Borba 👨‍💻
           </Typography>
           <Typography className=" text-left text-purple-400" variant="h6">
             Sou um desenvolvedor apaixonado por tecnologia e programação, com

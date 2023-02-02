@@ -23,7 +23,9 @@ const SideBar = () => {
         icon={<LinkedInIcon className="w-6 h-6" />}
       />
       <SideBarIcon
-        onClick={() => window.open("https://github.com/chicogborba", "_blank")}
+        onClick={() =>
+          window.open("mailto:f.grudzinski@edu.pucrs.br", "_blank")
+        }
         tooltip="E-mail"
         icon={<Mail className="w-6 h-6" />}
       />

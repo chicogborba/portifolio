@@ -14,7 +14,7 @@ const SideBarIcon = ({
       <div onClick={onClick} className="sidebar-icon group">
         {icon}
         {tooltip && (
-          <span className="sidebar-tooltip group-hover:scale-100">
+          <span className="sidebar-tooltip  group-hover:scale-100">
             {tooltip}
           </span>
         )}

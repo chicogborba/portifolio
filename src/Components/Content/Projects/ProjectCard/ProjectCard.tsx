@@ -7,7 +7,7 @@ interface ProjectCardProps {
 }
 const ProjectCard = ({ img, title, description }: ProjectCardProps) => {
   return (
-    <div className="p-3 border-2 border-violet-400 h-fit max-w-xs rounded-xl">
+    <div className="p-3 border-2 border-violet-400 flex-grow-1 max-w-xs rounded-xl">
       <div className="flex flex-col">
         <img className=" my-4 rounded-3xl self-center h-32 w-32" src={img} />
         <h1 className="text-2xl whitespace-nowrap text-center text-purple-400">

@@ -77,9 +77,9 @@ const Projects = () => {
   return (
     <>
       <div className="flex flex-col justify-center gap-16 mt-16 mb-16 text-purple-400">
-        <div>
-          <h1 className="text-4xl text-center text-purple-400">Projects</h1>
-        </div>
+        <h1 className="text-6xl text-center text-purple-400">
+          💡 Projetos 💡{" "}
+        </h1>
         <div className="flex flex-row justify-center gap-12  flex-wrap">
           {projectsList.map((project) => (
             <ProjectCard

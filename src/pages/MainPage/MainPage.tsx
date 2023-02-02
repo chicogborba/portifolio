@@ -8,13 +8,16 @@ const MainPage = () => {
     palette: {
       mode: "dark",
     },
+    typography: {
+      fontFamily: ["Questrial", "sans-serif"].join(","),
+    },
   });
 
   //<SideBar />
   return (
     <ThemeProvider theme={theme}>
       <SideBar />
-      <div className="flex justify-center">
+      <div className="flex justify-center font-Questrial">
         <Content />
       </div>
     </ThemeProvider>
