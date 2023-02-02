@@ -22,7 +22,7 @@ const Content = () => {
 
   return (
     <div className="ml-16 mt-6 mb-6 flex-wrap">
-      <Paper sx={paperStyles} className={"h-screen justify-center p-16"}>
+      <Paper sx={paperStyles} className={"h-full justify-center p-16"}>
         <HeaderTitle />
         <EnhancedDivider />
         <Techs />
