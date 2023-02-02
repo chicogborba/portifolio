@@ -22,8 +22,7 @@ const Experiences = () => {
               className="rounded-full overflow-hidden
             w-fit h-fit
             hover:cursor-pointer
-            hover:m-[-2px]
-            hover:border-[6px]
+            hover:scale-110
             transition-all duration-100
             border-violet-400 border-4"
             >
