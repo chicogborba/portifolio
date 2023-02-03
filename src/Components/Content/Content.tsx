@@ -24,11 +24,8 @@ const Content = () => {
     <div className="ml-16 mt-6 mb-6 flex-wrap">
       <Paper sx={paperStyles} className={"h-full justify-center p-16"}>
         <HeaderTitle />
-        <EnhancedDivider />
         <Techs />
-        <EnhancedDivider />
         <Experiences />
-        <EnhancedDivider />
         <Projects />
       </Paper>
     </div>

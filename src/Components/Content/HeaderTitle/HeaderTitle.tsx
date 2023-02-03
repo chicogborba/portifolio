@@ -5,7 +5,7 @@ import animationData from "../../../animations/animation.json";
 
 const HeaderTitle = () => {
   const titleStyles = {
-    marginBottom: "24px",
+    marginBottom: "1.5",
   };
 
   const defaultOptions = {
@@ -18,7 +18,7 @@ const HeaderTitle = () => {
   };
   return (
     <>
-      <div className="flex flex-wrap justify-center text-justify">
+      <div className="flex flex-wrap justify-center text-justify mb-8">
         <div className="mt-16 mr-8 flex-1">
           <Typography
             className={"text-purple-300"}

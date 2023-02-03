@@ -31,11 +31,11 @@ const Techs = () => {
 
   return (
     <div className="flex justify-center mb-20">
-      <div className=" text-purple-300 flex-col justify-center text-center mt-8 ml-8 mr-8 w-2/5">
+      <div className=" text-purple-300 flex-col justify-center text-center mt-8 ml-8 mr-8 flex-1 max-w-[35%]">
         <Typography className="" variant="h4">
           🚀 Tecnologias 🚀
         </Typography>
-        <div className="grid grid-cols-4 justify-around gap-4 mt-8">
+        <div className="flex flex-row flex-wrap gap-8 mt-8">
           {techsList.map((tech) => (
             <TechIcon
               tech={tech}
